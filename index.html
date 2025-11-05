@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Liquidacion de Tunel Exposynergy</title>
+
+  <!-- 🔹 Favicon -->
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="apple-touch-icon" sizes="180x180" href="logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="logo.png">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <!-- 🔹 Cabecera con título y logo -->
+    <div class="card-header">
+      <h1>LIQUIDACIÓN DE CAMARA EXPOSYNERGY</h1>
+      <img src="logoexpo.jpg" alt="Logo Empresa" class="logo-empresa">
+    </div>
+
+    <div class="menu">
+      <button id="btnLiquidacion">Liquidación de Túnel</button>
+      <button id="btnEtiquetas">Requerimiento de Etiquetas</button>
+    </div>
+
+    <div>
+      <input id="fileInput" type="file" accept=".xlsx,.xls" />
+    </div>
+
+    <div class="controls">
+      <button id="processBtn" disabled>Procesar y crear tabla dinámica</button>
+      <button id="downloadBtn" disabled>Descargar Excel</button>
+      <button id="imprimirBtn" disabled>Imprimir Tabla</button>
+    </div>
+
+    <!-- 🔹 Encabezado editable Liquidación -->
+    <div id="encabezadoLiquidacion" class="encabezado-liquidacion-wrapper">
+      <div class="encabezado-imagen">
+        <img src="image1.jpg" alt="Encabezado Principal">
+      </div>
+
+      <div class="encabezado-liquidacion">
+        <div class="col izquierda">
+          <label>Fecha:<input type="date" id="fecha"></label>
+          <label>Turno:<input type="text" id="turno"></label>
+        </div>
+        <div class="col centro">
+          <label>Túnel:<input type="text" id="tunelCentro"></label>
+        </div>
+        <div class="col derecha">
+          <label>Total de Libras:<input type="number" id="totalLibras" step="0.01"></label>
+          <label>Total Masters:<input type="number" id="totalMasters"></label>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🔹 Encabezado Imagen + Inputs para Etiquetas -->
+    <div id="encabezadoEtiquetas" class="encabezado-liquidacion-wrapper" style="display:none;">
+      <div class="encabezado-imagen">
+        <img src="image2.jpg" alt="Encabezado Etiquetas">
+      </div>
+
+      <div class="encabezado-liquidacion">
+        <div class="col izquierda">
+          <label>Fecha:<input type="date" id="fechaEtiquetas"></label>
+        </div>
+        <div class="col centro">
+          <label>Túnel:<input type="text" id="tunelEtiquetas"></label>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🔹 Contenedores de tablas -->
+    <div id="outputLiquidacion" class="tabla-container tabla1"></div>
+
+    <!-- 🔹 Pie de página para Liquidación -->
+    <div class="pie-pagina-impresion pie1">
+      <img src="image3.jpg" alt="Pie de página Liquidación">
+    </div>
+
+    <div id="outputEtiquetas" class="tabla-container tabla2" style="display:none;"></div>
+
+    <!-- 🔹 Pie de página para Etiquetas -->
+    <div class="pie-pagina-impresion pie2">
+      <img src="image4.jpg" alt="Pie de página Etiquetas">
+    </div>
+  </div>
+
+  <!-- 🔹 Pie de página general -->
+  <footer class="footer-general">
+    Gilson Herrera Diaz 2025 © Todos los derechos reservados
+  </footer>
+
+  <!-- Librería XLSX -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
+  <!-- Tu script principal -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,387 @@
+.tabla-container { 
+  margin-top:12px; 
+  margin-bottom: 30px; /* espacio después de la tabla */
+}
+
+body { 
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial; 
+  padding: 40px 30px; /* más espacio general alrededor de todo */
+  background:whitesmoke; 
+  color:#111;
+}
+
+h1 { 
+  font-size: 20px; 
+  margin-bottom:12px; /* un poco más de espacio abajo */
+}
+
+.card { 
+  background: white; 
+  padding: 24px; /* más espacio interno */
+  border-radius:10px; 
+  box-shadow: 0 6px 18px rgba(20,20,50,0.06); 
+  max-width:1100px; 
+  margin: 0 auto 40px auto; /* centrado y espacio abajo */
+}
+
+/* 🔹 Cabecera con título y logo */
+.card-header {
+  display: flex;
+  justify-content: space-between; /* título a la izquierda, logo a la derecha */
+  align-items: center;
+  margin-bottom: 20px; /* espacio debajo de la cabecera */
+}
+
+.card-header h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.logo-empresa {
+  max-height: 150px; /* ajusta tamaño del logo */
+  height: auto;
+  width: auto;
+}
+
+input[type=file], input[type=text], input[type=number], input[type=date]{ 
+  margin: 4px 8px; 
+}
+
+button { 
+  padding:8px 12px; 
+  border-radius:8px; 
+  border: none; 
+  background:#2563eb; 
+  color:white; 
+  cursor:pointer; 
+}
+
+button:disabled{ 
+  opacity:0.5; 
+  cursor:not-allowed; 
+}
+
+table{ 
+  border-collapse: collapse; 
+  width:100%; 
+  margin-top:12px; 
+  position:relative; 
+}
+
+th, td{ 
+  padding:8px; 
+  border:1px solid #e6edf3; 
+  text-align:left; 
+  font-size:13px; 
+  position:relative; 
+}
+
+th{ 
+  background:#f1f5f9; 
+}
+
+tfoot td { 
+  font-weight: bold; 
+  background:#f3f4f6; 
+}
+
+.controls { 
+  display:flex; 
+  gap:12px; 
+  align-items:center; 
+  margin-top:16px; 
+  flex-wrap:wrap;
+}
+
+.notice{ 
+  color:#374151; 
+  font-size:13px; 
+  margin-top:16px; 
+}
+
+.custom-fields { 
+  display:flex; 
+  justify-content:space-between; 
+  flex-wrap:wrap; 
+  margin-top:12px; 
+}
+
+.custom-fields label { 
+  display:flex; 
+  flex-direction: column; 
+  font-size:13px; 
+}
+
+.filter-btn { 
+  margin-left:4px; 
+  padding:2px 4px; 
+  font-size:10px; 
+  cursor:pointer; 
+  position:absolute; 
+  right:4px; 
+  top:50%; 
+  transform:translateY(-50%); 
+}
+
+.filter-dropdown { 
+  display:none; 
+  position:absolute; 
+  background:white; 
+  border:1px solid #ccc; 
+  max-height:200px; 
+  overflow:auto; 
+  z-index:10; 
+  padding:6px; 
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2); 
+}
+
+.filter-dropdown label { 
+  display:block; 
+  font-size:12px; 
+  margin-bottom:2px; 
+  cursor:pointer; 
+}
+
+th { 
+  position:relative; 
+}
+
+/* 🔹 Encabezado de Liquidación editable */
+.encabezado-liquidacion-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* más espacio entre filas */
+  margin-bottom: 20px; /* espacio debajo de cada sección de encabezado */
+}
+
+.encabezado-imagen img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.encabezado-liquidacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+.encabezado-liquidacion .col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.encabezado-liquidacion label {
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.encabezado-liquidacion input {
+  padding: 4px 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 120px;
+}
+
+/* 🔹 Estilo para los inputs del encabezado de Etiquetas (idénticos a Liquidación) */
+#encabezadoEtiquetas .encabezado-liquidacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+#encabezadoEtiquetas .encabezado-liquidacion .col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+#encabezadoEtiquetas .encabezado-liquidacion label {
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+#encabezadoEtiquetas .encabezado-liquidacion input {
+  padding: 4px 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 120px;
+}
+
+/* 🔹 Pies de página personalizados */
+.pie-pagina-impresion {
+  display: none;
+  text-align: center;
+  margin-top: 40px;
+  page-break-before: avoid;
+  page-break-after: avoid;
+}
+.pie-pagina-impresion img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ----------------------- */
+/* 🔹 Ajustes para impresión */
+/* ----------------------- */
+@media print {
+  body * {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  .encabezado-liquidacion-wrapper,
+  .encabezado-liquidacion-wrapper *,
+  .tabla-container,
+  .tabla-container *,
+  .pie-pagina-impresion,
+  .pie-pagina-impresion * {
+    visibility: visible;
+    position: relative;
+  }
+
+  .encabezado-liquidacion-wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    page-break-before: avoid !important;
+    page-break-after: avoid !important;
+  }
+
+  .encabezado-imagen img {
+    display: block;
+    margin-bottom: 4px;
+    page-break-before: avoid !important;
+    page-break-after: avoid !important;
+  }
+
+  .tabla-container {
+    width: 100%;
+    margin-top: 0;
+    page-break-before: avoid !important;
+    page-break-after: auto !important;
+    page-break-inside: auto !important;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 10px;
+    page-break-inside: auto;
+    margin: 0;
+  }
+
+  th, td {
+    border: 1px solid #ccc;
+    padding: 3px 5px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.2;
+  }
+
+  th {
+    background: #f1f5f9;
+    font-weight: bold;
+  }
+
+  /* 🔹 Datos más grandes y compactos */
+  .tabla-container table tbody td {
+    font-size: 10px !important;
+    padding: 3px 5px !important;
+    line-height: 1.2 !important;
+  }
+
+  /* ✅ Total general al final real, sin repetirse */
+  table tfoot {
+    display: table-row-group !important;
+    page-break-before: avoid;
+    page-break-after: avoid;
+    page-break-inside: avoid !important;
+  }
+
+  table tfoot td {
+    font-weight: bold;
+    font-size: 11px !important;
+    border-top: 2px solid #000;
+    background: #e5e7eb;
+    text-align: center;
+  }
+
+  /* 🔹 Evitar que el total quede separado de la tabla */
+  table tfoot tr {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* 🔹 Ocultar controles */
+  .filter-btn,
+  .filter-dropdown,
+  #btnLiquidacion,
+  #btnEtiquetas,
+  #processBtn,
+  #downloadBtn,
+  #imprimirBtn,
+  #fileInput {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  /* ✅ Pie de impresión */
+  .pie-pagina-impresion {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    page-break-inside: avoid;
+    page-break-after: auto !important;
+  }
+
+  .pie1, .pie2 {
+    display: none !important;
+  }
+
+  #outputLiquidacion:not([style*="display: none"]) ~ .pie1 {
+    display: block !important;
+  }
+  #outputEtiquetas:not([style*="display: none"]) ~ .pie2 {
+    display: block !important;
+  }
+
+  @page {
+    margin: 8mm 8mm 10mm 8mm;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* 🔹 Pie de página general de la página web */
+.footer-general {
+  text-align: center;        /* Centrar el texto */
+  padding: 10px 0;           /* Espaciado arriba y abajo */
+  font-size: 14px;           /* Tamaño de fuente */
+  color: #555;               /* Color gris */
+  margin-top: 20px;          /* Separación de la tarjeta principal */
+  border-top: 1px solid #ccc; /* Línea superior opcional */
+  background: #f9f9f9;       /* Fondo ligero opcional */
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial;
+}
+
+/* 🔹 Pie de página general al imprimir */
+@media print {
+  .footer-general {
+    display: block;
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    color: #000;
+  }
+}
