@@ -43,13 +43,19 @@
       </div>
 
       <div class="encabezado-liquidacion">
+        <!-- Columna IZQUIERDA -->
         <div class="col izquierda">
           <label>Fecha:<input type="date" id="fecha"></label>
           <label>Turno:<input type="text" id="turno"></label>
         </div>
+
+        <!-- Columna CENTRO -->
         <div class="col centro">
           <label>Túnel:<input type="text" id="tunelCentro"></label>
+          <label>Tipo:<input type="text" id="tipo"></label> <!-- NUEVO INPUT -->
         </div>
+
+        <!-- Columna DERECHA -->
         <div class="col derecha">
           <label>Total de Libras:<input type="number" id="totalLibras" step="0.01"></label>
           <label>Total Masters:<input type="number" id="totalMasters"></label>
@@ -75,15 +81,11 @@
 
     <!-- 🔹 Contenedores de tablas -->
     <div id="outputLiquidacion" class="tabla-container tabla1"></div>
-
-    <!-- 🔹 Pie de página para Liquidación -->
     <div class="pie-pagina-impresion pie1">
       <img src="image3.jpg" alt="Pie de página Liquidación">
     </div>
 
     <div id="outputEtiquetas" class="tabla-container tabla2" style="display:none;"></div>
-
-    <!-- 🔹 Pie de página para Etiquetas -->
     <div class="pie-pagina-impresion pie2">
       <img src="image4.jpg" alt="Pie de página Etiquetas">
     </div>
