@@ -226,6 +226,11 @@ th {
   height: auto;
 }
 
+#tipo {
+  width: 125px; /* Opcional: más ancho que otros inputs del centro */
+}
+
+
 /* ----------------------- */
 /* 🔹 Ajustes para impresión */
 /* ----------------------- */
@@ -385,3 +390,4 @@ th {
     color: #000;
   }
 }
+
